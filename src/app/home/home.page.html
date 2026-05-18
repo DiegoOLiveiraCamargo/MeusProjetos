@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Agricultura Help
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-label for="">Quais temperaturas foram atingidas durante os 4 meses?</ion-label><br><br>
+  <ion-label for="">Mês 1:</ion-label>
+  <ion-range (ionChange)="onIonChange($event,1)" [ticks]="true" [snaps]="true" [min]="0" [max]="30" [(ngModel)]="temp1"></ion-range><br>
+  <ion-label><p>{{valorRange1}} °C</p></ion-label><br>
+
+  <ion-label for="">Mês 2:</ion-label>
+  <ion-range (ionChange)="onIonChange($event,2)" [ticks]="true" [snaps]="true" [min]="0" [max]="30" [(ngModel)]="temp2"></ion-range><br>
+  <ion-label><p>{{valorRange2}} °C</p></ion-label><br>
+
+  <ion-label for="">Mês 3:</ion-label>
+  <ion-range (ionChange)="onIonChange($event,3)" [ticks]="true" [snaps]="true" [min]="0" [max]="30" [(ngModel)]="temp3"></ion-range><br>
+  <ion-label><p>{{valorRange3}} °C</p></ion-label><br>
+
+  <ion-label for="">Mês 4:</ion-label>
+  <ion-range (ionChange)="onIonChange($event,4)" [ticks]="true" [snaps]="true" [min]="0" [max]="30" [(ngModel)]="temp4"></ion-range><br>
+  <ion-label><p>{{valorRange4}} °C</p></ion-label><br>
+
+  <ion-item>
+    <ion-button>Enviar</ion-button>
+  </ion-item>
+
+</ion-content>
